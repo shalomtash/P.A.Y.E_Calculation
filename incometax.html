@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="bootstrap-social-gh-pages/bootstrap-social.less" rel="stylesheet">
+
+
+    <title>Income Tax Calculator</title>
+
+</head>
+
+<body>
+       
+    <!--Navigation-->
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				  <ul class="nav navbar-nav">
+					<li><a class="active" href="index.html">Home</a></li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+    <!--Navigation-->
+        
+          
+    <!--Calculator-->
+        	<div class="about" >
+		     <div class="container">
+			 	<h3 id="incomelink">Income Tax Calculator</h3>
+				 <div class="about-top">
+                     <div class="col-md-6 ab-text">
+                        
+                         <div class="Container-fluid">
+                            <form id="incomeTax">
+                              <label for="income">Gross Income</label>
+                                <input id="income" type="number">
+                                </br>
+                                </br>
+                             
+                              <button type="submit" class="btn" id="newrate">Calculate (new nssf rates)</button>
+                              <button type="submit" class="btn" id="oldrate">Calculate (old nssf rates)</button>
+                            </form>
+
+                            <table>
+                                <tr>
+                                    <th>Income Variable</th>
+                                    <th>Contribution</th>
+                                </tr>
+                                <tr>
+                                    <td>Gross Pay</td>
+                                    <td id="grossIncome"></td>
+                                </tr>
+                                <tr>
+                                    <td>NSSF Contribution</td>
+                                    <td id="nssf"></td>
+                                </tr>
+                                <tr>
+                                    <td>Taxable Pay</td>
+                                    <td id= "taxablePay"></td>
+                                </tr>
+                                <tr>
+                                    <td>Personal Relief</td>
+                                    <td id="personalR"></td>
+                                </tr>
+                                <tr>
+                                    <td>PAYE</td>
+                                    <td id="paye"></td>
+                                </tr>
+                                <tr>
+                                    <td>NHIF Contribution</td>
+                                    <td id="nhif"></td>
+                                </tr>
+                                <tr>
+                                    <td>Net Pay</td>
+                                    <td id="netPay"></td>
+                                </tr>
+                                <tr>
+                                    <td>Effective Tax Rate</td>
+                                    <td id="effectiveTax">%</td>
+                                </tr>
+                            </table>
+                        </div>
+                     </div>
+                     
+                     <div class="col-md-6 info">
+                         <div class="about-content calc">
+                             <div class="about-section">
+                                 <h5><a class="about-section-title" href="#about-1">
+								 NSSF<i class="glyphicon glyphicon-chevron-down"></i></a>
+                                 </h5>
+                                 <div id="about-1" class="about-section-content" style="display: none;">
+                                      <p>The National Social Security Fund (NSSF) is a government agency that was established in 1965 through an Act of Parliament. It's mandatory national scheme whose main objective was to provide basic financial security benefits to Kenyan upon retirement for employees in the both the formal and informal sectors of the economy. NSSF pension contribution rates are based on an individual's gross income..</p>
+                                 </div>
+                             </div>
+                             <div class="calc-section">
+                                 <h5><a class="about-section-title" href="#about-2">
+								PAYE<i class="glyphicon glyphicon-chevron-down"></i></a>
+                                 </h5>
+                                 <div id="about-2" class="about-section-content" style="display: none;">
+                                     <p>Pay-as-you-earn is the process by which the government via the Kenya Revenue Authority (KRA) collects employee taxes directly from the employer. It’s the method of deducting income tax from salaries and wages applies to all income from any office or employment. Thus "pay-as-you-earn" applies to weekly wages, monthly salaries, annual salaries, bonuses, commissions, directors' fees (whether the director is resident or non-resident) pensions paid to pensioners who reside in Kenya, and any other income from an office or employment. The system applies to all cash emoluments and all credits in respect of emoluments to employees' accounts with their employers, no matter to what period they relate. It does not include earnings from "casual employment" which means any engagement with any one employer, which is made for a period of less than one month. Although, regular part-time employees and regular casual employment where the employees are employed casually but regularly are not considered to be casual employees.</p>
+                                 </div>
+                             </div>
+                             <div class="about-section">
+                                 <h5><a class="about-section-title" href="#about-3">
+								Personal Relief<i class="glyphicon glyphicon-chevron-down"> </i> </a>
+                                 </h5>
+                                 <div id="about-3" class="about-section-content" style="display: none;">
+                                     <p>A resident individual with taxable income is entitled to a personal relief of Kshs. 2,400 per month. This is a uniform relief and employers are advised to automatically grant personal relief to all employees irrespective of their marital status.</p>
+                                 </div>
+                             </div>
+                             <div class="about-section">
+                                 <h5><a class="about-section-title" href="#about-4">
+								 NHIF<i class="glyphicon glyphicon-chevron-down"> </i> </a>
+                                 </h5>
+                                 <div id="about-4" class="about-section-content" style="display: none;">
+                                     <p>The National Hospital Insurance Fund (NHIF) is a government agency that was established in 1966 as a department under the Ministry of Health through an Act of Parliament. Its core mandate is to provide medical insurance cover to all its members and their declared defendants (spouse and children). The NHIF membership is open to all Kenyans who have attained the age of 18 years and years and have a monthly income of more than Kshs 1,000 and contribution rates are based on an individual's gross income.And a self-employed individual pays Kshs 500.</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+					   <div class="clearfix"></div>
+            </div>
+        </div>
+    <!--Calculator-->
+    
+<!--Linking scripts-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/trial.js"></script>
+</body>
+
+</html>
